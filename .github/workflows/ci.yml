@@ -8,7 +8,7 @@ on:
 
 jobs:
   test_suma:
-    name: Ejecutar pruebas de suma
+    name: suma
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,12 +19,12 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Run tests for suma
+      - name: suma
         run: |
           python -m unittest test_suma.py
 
   test_resta:
-    name: Ejecutar pruebas de resta
+    name: resta
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -40,7 +40,7 @@ jobs:
           python -m unittest test_resta.py
 
   test_multiplicacion:
-    name: Ejecutar pruebas de multiplicación
+    name: multiplicacion
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -51,12 +51,12 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Run tests for multiplicación
+      - name: Run tests for multiplicacion
         run: |
           python -m unittest test_multiplicacion.py
 
   test_division:
-    name: Ejecutar pruebas de división
+    name: division
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -67,6 +67,6 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Run tests for división
+      - name: Run tests for division
         run: |
           python -m unittest test_division.py
