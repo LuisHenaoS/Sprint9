@@ -1,4 +1,4 @@
-name: Python CI - Operaciones Matemáticas
+name: Python CI Operaciones
 
 on:
   push:
