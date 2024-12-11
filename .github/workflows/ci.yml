@@ -1,0 +1,72 @@
+name: Python CI - Operaciones Matemáticas
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_suma:
+    name: Ejecutar pruebas de suma
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Run tests for suma
+        run: |
+          python -m unittest test_suma.py
+
+  test_resta:
+    name: Ejecutar pruebas de resta
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Run tests for resta
+        run: |
+          python -m unittest test_resta.py
+
+  test_multiplicacion:
+    name: Ejecutar pruebas de multiplicación
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Run tests for multiplicación
+        run: |
+          python -m unittest test_multiplicacion.py
+
+  test_division:
+    name: Ejecutar pruebas de división
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Run tests for división
+        run: |
+          python -m unittest test_division.py
